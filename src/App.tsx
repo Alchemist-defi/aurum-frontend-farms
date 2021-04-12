@@ -46,6 +46,9 @@ const App: React.FC = () => {
       <Menu>
         <Suspense fallback={<PageLoader />}>
           <Switch>
+            <Route path="/aurum" exact>
+              <Home />
+            </Route>
             <Route path="/vessels">
               <Farms />
             </Route>

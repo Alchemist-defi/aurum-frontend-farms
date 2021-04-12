@@ -27,7 +27,7 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('/images/egg/3.png'), url('/images/egg/3b.png');
+    background-image: url('/images/egg/3.png'), url('/images/egg/9.png');
     background-position: left center, right center;
     height: 165px;
     padding-top: 0;
@@ -72,14 +72,13 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Heading as="h1" size="xl" mb="24px" color="secondary">
-          {TranslateString(576, 'Alchemist Defi')}
+          {TranslateString(10006, 'Enchanted Chamber')}
         </Heading>
-        <Text>{TranslateString(578, 'Top 1 app to turn crypto into gold!.')}</Text>
+        <Text>{TranslateString(10007, 'Enchant your MIST and receive the highly desired AURUM')}</Text>
       </Hero>
       <div>
         <Cards>
-          <FarmStakingCard />
-          <TwitterCard/>
+          <FarmStakingCard />          
           <CakeStats />
           <TotalValueLockedCard />
         </Cards>

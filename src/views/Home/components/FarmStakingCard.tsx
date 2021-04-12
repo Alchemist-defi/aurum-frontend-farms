@@ -69,16 +69,16 @@ const FarmedStakingCard = () => {
     <StyledFarmStakingCard>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(542, 'Farms & Staking')}
+          {TranslateString(999, 'Aurum Chamber Details')}
         </Heading>
         <CardImage src="/images/egg/2.svg" alt="cake logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(544, 'MIST to Harvest')}</Label>
+          <Label>{TranslateString(10010, 'Aurum to Harvest')}</Label>
           <CakeHarvestBalance earningsSum={earningsSum}/>
           <Label>~${(eggPrice * earningsSum).toFixed(2)}</Label>
         </Block>
         <Block>
-          <Label>{TranslateString(546, 'MIST in Wallet')}</Label>
+          <Label>{TranslateString(10011, 'Aurum in Wallet')}</Label>
           <CakeWalletBalance cakeBalance={cakeBalance} />
           <Label>~${(eggPrice * cakeBalance).toFixed(2)}</Label>
         </Block>
@@ -91,8 +91,8 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting MIST')
-                : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
+                ? TranslateString(10012, 'Collecting Aurum')
+                : TranslateString(998, `Collect all (${balancesWithValue.length})`)}
             </Button>
           ) : (
             <UnlockButton fullWidth />

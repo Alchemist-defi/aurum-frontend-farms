@@ -1206,6 +1206,13 @@
         "text": "In Wallet"
       }
     },
+    
+    {
+      "data": {
+        "stringId": 998,
+        "text": "Collect All"
+      }
+    },
     {
       "data": {
         "stringId": 10000,
@@ -1241,7 +1248,52 @@
         "stringId": 10005,
         "text": "Market Cap"
       }
-    }
+    },
+    {
+      "data": {
+        "stringId": 10006,
+        "text": "Enchanted Chamber"
+      }
+    },
+    {
+      "data": {
+        "stringId": 10007,
+        "text": "Enchant your MIST and receive the highly desired AURUM"
+      }
+    },
+    {
+      "data": {
+        "stringId": 10008,
+        "text": "Aurum Stats"
+      }
+    },
+    {
+      "data": {
+        "stringId": 10009,
+        "text": "New Aurum/Block"
+      }
+    },
+    {
+      "data": {
+        "stringId": 10010,
+        "text": "Aurum enchanted and ready"
+      }
+    },
+    {
+      "data": {
+        "stringId": 10011,
+        "text": "Aurum in Alchemist Wallet"
+      }
+    },
+    {
+      "data": {
+        "stringId": 10012,
+        "text": "Collecting Aurum"
+      }
+    }    
+    
+
+
   ],
   "pagination": {
     "offset": 0,
