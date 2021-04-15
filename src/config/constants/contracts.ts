@@ -30,5 +30,18 @@ export default {
   referral: {
     56: '0x6b0BB4F7A150dedcDe4cE5D66BA923b4194De283',
     97: '',
+  },
+  mist: {
+    56: '0x6f8fe12cc34398d15b7d5a5ba933e550da1d099f',
+    97: '',
+  },
+  aurum: {
+    56: '0x49207BAA3a7332F0716788aa57B088D499bcc104',
+    97: '',
+  },
+  knight: {
+    56: '0x16c0e0936e1b38ff1f9b8a1e75d8ba29adf87d30',
+    97: '',
   }
+
 }

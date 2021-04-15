@@ -66,6 +66,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   },
+  {
+    pid: 5,
+    risk: 5,
+    lpSymbol: 'KNIGHT-MIST LP',
+    lpAddresses: {
+      97: '',
+      56: '0xe873ee21415613c4aa8dcade7a6f4da46a03631b',
+    },
+    tokenSymbol: 'MIST',
+    tokenAddresses: {
+      97: '',
+      56: '0x6f8FE12CC34398d15b7D5A5BA933E550DA1D099f',
+    },
+    quoteTokenSymbol: QuoteToken.KNIGHT,
+    quoteTokenAdresses: contracts.knight,
+    isCommunity: true,
+  },
 ]
 
 export default farms

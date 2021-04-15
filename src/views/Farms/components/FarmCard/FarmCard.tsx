@@ -135,6 +135,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         depositFee={farm.depositFeeBP}
         farmImage={farmImage}
         tokenSymbol={farm.tokenSymbol}
+        isCommunity={farm.isCommunity}
       />
       {!removed && (
         <Flex justifyContent='space-between' alignItems='center'>
