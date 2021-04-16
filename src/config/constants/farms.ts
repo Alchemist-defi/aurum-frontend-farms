@@ -74,13 +74,13 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0xe873ee21415613c4aa8dcade7a6f4da46a03631b',
     },
-    tokenSymbol: 'MIST',
+    tokenSymbol: 'KNIGHT',
     tokenAddresses: {
       97: '',
-      56: '0x6f8FE12CC34398d15b7D5A5BA933E550DA1D099f',
+      56: '0x16c0e0936e1b38ff1f9b8a1e75d8ba29adf87d30',
     },
-    quoteTokenSymbol: QuoteToken.KNIGHT,
-    quoteTokenAdresses: contracts.knight,
+    quoteTokenSymbol: QuoteToken.MIST,
+    quoteTokenAdresses: contracts.mist,
     isCommunity: true,
   },
 ]
