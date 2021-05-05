@@ -47,8 +47,8 @@ const farms: FarmConfig[] = [
       97: '',
       56: '0x49207BAA3a7332F0716788aa57B088D499bcc104',
     },
-    quoteTokenSymbol: QuoteToken.AURUM,
-    quoteTokenAdresses: contracts.aurum
+    quoteTokenSymbol: QuoteToken.CAKE,
+    quoteTokenAdresses: contracts.cake
   },
 
   {
@@ -162,12 +162,12 @@ const farms: FarmConfig[] = [
     lpSymbol: 'WBNB',
     lpAddresses: {
       97: '',
-      56: '0x1B96B92314C44b159149f7E0303511fB2Fc4774f',  // WBNB-BUSD
+      56: '0x1b96b92314c44b159149f7e0303511fb2fc4774f', // BNB-BUSD LP
     },
     tokenSymbol: 'WBNB',
     tokenAddresses: {
       97: '',
-      56: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
+      56: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,

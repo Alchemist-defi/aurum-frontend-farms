@@ -143,6 +143,15 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
         tokenSymbol={farm.tokenSymbol}
         isCommunity={farm.isCommunity}
       />
+      {(farm.pid === 6 || farm.pid === 7 || farm.pid === 9 || farm.pid === 10 || farm.pid === 11 || farm.pid === 12) && (
+        <div className="ribbon-wrapper">
+          <div className="ribbon">
+            <Text className="ribbontext" style={{ fontWeight: 'bold', color: 'white' }}>
+              {TranslateString(9999, 'NEW!')}
+            </Text>
+          </div>
+        </div>
+      )}
       {!removed && (
         <Flex justifyContent='space-between' alignItems='center'>
           <Text>{TranslateString(352, 'APR')}:</Text>
