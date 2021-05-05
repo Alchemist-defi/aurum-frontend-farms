@@ -74,6 +74,10 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           totalValue = totalValue.times(mistPrice);
         }
 
+        if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
+          totalValue = totalValue.times(cakePrice);
+        }
+
         if(totalValue.comparedTo(0) > 0){
           apy = apy.div(totalValue);
         }
