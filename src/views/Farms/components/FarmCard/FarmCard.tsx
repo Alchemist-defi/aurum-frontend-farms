@@ -89,9 +89,10 @@ interface FarmCardProps {
   ethereum?: provider
   account?: string
   mistPrice?: BigNumber
+  aurumPrice?: BigNumber
 }
 
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethereum, account, mistPrice}) => {
+const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethereum, account, mistPrice, aurumPrice}) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
@@ -115,8 +116,11 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     if (farm.quoteTokenSymbol === QuoteToken.MIST) {
       return mistPrice.times(farm.lpTotalInQuoteToken)      
     }
+    if (farm.quoteTokenSymbol === QuoteToken.AURUM) {
+      return aurumPrice.times(farm.lpTotalInQuoteToken)      
+    }
     return farm.lpTotalInQuoteToken
-  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol, mistPrice])
+  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol, mistPrice, aurumPrice])
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
@@ -132,7 +136,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
 
   return (
     <FCard>
-      {farm.tokenSymbol === 'AURUM' && <StyledCardAccent />}
+      {(farm.tokenSymbol === 'MIST' || farm.tokenSymbol === 'AURUM') && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
