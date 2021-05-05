@@ -155,24 +155,23 @@ const farms: FarmConfig[] = [
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
   }, 
-
   {
-    pid: 8,
+    pid: 9,
     risk: 3,
     isTokenOnly: true,
-    lpSymbol: 'BTCB',
+    lpSymbol: 'WBNB',
     lpAddresses: {
       97: '',
-      56: '0x7561EEe90e24F3b348E1087A005F78B4c8453524',  // BTCB-WBNB
+      56: '0x1B96B92314C44b159149f7E0303511fB2Fc4774f',  // WBNB-BUSD
     },
-    tokenSymbol: 'BTCB',
+    tokenSymbol: 'WBNB',
     tokenAddresses: {
       97: '',
       56: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c',
     },
-    quoteTokenSymbol: QuoteToken.BNB,
-    quoteTokenAdresses: contracts.wbnb,
-  },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
+  }, 
   {
     pid: 10,
     risk: 3,
