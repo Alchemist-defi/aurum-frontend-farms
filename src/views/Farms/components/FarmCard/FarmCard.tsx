@@ -88,11 +88,10 @@ interface FarmCardProps {
   bnbPrice?: BigNumber
   ethereum?: provider
   account?: string
-  mistPrice?: BigNumber
-  aurumPrice?: BigNumber
+  mistPrice?: BigNumber  
 }
 
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethereum, account, mistPrice, aurumPrice}) => {
+const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice, ethereum, account, mistPrice}) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
@@ -115,12 +114,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     }
     if (farm.quoteTokenSymbol === QuoteToken.MIST) {
       return mistPrice.times(farm.lpTotalInQuoteToken)      
-    }
-    if (farm.quoteTokenSymbol === QuoteToken.AURUM) {
-      return aurumPrice.times(farm.lpTotalInQuoteToken)      
-    }
+    }    
     return farm.lpTotalInQuoteToken
-  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol, mistPrice, aurumPrice])
+  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol, mistPrice])
+  
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
