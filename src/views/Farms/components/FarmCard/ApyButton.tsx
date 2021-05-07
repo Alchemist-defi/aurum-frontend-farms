@@ -11,6 +11,7 @@ export interface ApyButtonProps {
   quoteTokenAdresses?: Address
   quoteTokenSymbol?: string
   tokenAddresses: Address
+  isTokenOnly? : boolean
 }
 
 const ApyButton: React.FC<ApyButtonProps> = ({
@@ -20,6 +21,7 @@ const ApyButton: React.FC<ApyButtonProps> = ({
   tokenAddresses,
   cakePrice,
   apy,
+  isTokenOnly
 }) => {
   const [onPresentApyModal] = useModal(
     <ApyCalculatorModal
@@ -28,10 +30,10 @@ const ApyButton: React.FC<ApyButtonProps> = ({
       quoteTokenSymbol={quoteTokenSymbol}
       tokenAddresses={tokenAddresses}
       cakePrice={cakePrice}
-      apy={apy}
+      apy={apy}  
+      isTokenOnly={isTokenOnly}
     />,
-  )
-
+  )  
   return (
     <IconButton onClick={onPresentApyModal} variant="text" size="sm" ml="4px">
       <CalculateIcon />
