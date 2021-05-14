@@ -1,6 +1,7 @@
 import React, { useEffect, useCallback, useState } from 'react'
 import { Route, useRouteMatch } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import styled from 'styled-components'
 import BigNumber from 'bignumber.js'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { provider } from 'web3-core'
@@ -16,11 +17,31 @@ import useI18n from 'hooks/useI18n'
 import FarmCard, { FarmWithStakedValue } from './components/FarmCard/FarmCard'
 import FarmTabButtons from './components/FarmTabButtons'
 import Divider from './components/Divider'
-import { getBalanceNumber } from '../../utils/formatBalance'
+// import { getBalanceNumber } from '../../utils/formatBalance'
 
 export interface FarmsProps{
   tokenMode?: boolean
 }
+
+const Hero = styled.div`
+  align-items: center;  
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 32px;
+  padding-top: 116px;
+  text-align: center;
+
+  ${({ theme }) => theme.mediaQueries.lg} {
+    background-image: url('/images/egg/3.png'), url('/images/egg/hero.png');
+    background-position: left center, right center;
+    height: 165px;
+    padding-top: 0;
+  }  
+`
 
 const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const { path } = useRouteMatch()
@@ -103,16 +124,22 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
 
   return (
     <Page>
+      <Hero>
       <Heading as="h1" size="lg" color="primary" mb="50px" style={{ textAlign: 'center' }}>
         {
           tokenMode ?
-            TranslateString(10002, 'Stake tokens to earn AURUM')
+            TranslateString(999, 'Stake tokens to earn AURUM')
             :
-          TranslateString(320, 'Stake LP tokens to earn AURUM')
+          TranslateString(999, 'Stake LP tokens to earn AURUM')
         }
       </Heading>
+      </Hero>
       <Heading as="h2" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
-        {TranslateString(10000, 'Deposit Fee will be used to buyback AURUM')}
+        {TranslateString(999, 'AURUM is Latin for Gold, and just like Gold AURUM is intended to be a store of value and is very scare because of its low emission rate. AURUM will also have special powers in the future allowing you to cast spells (and votes).')}            
+      </Heading>
+
+      <Heading as="h3" color="secondary" mb="50px" style={{ textAlign: 'center' }}>
+      {TranslateString(999, 'Deposit fees are used to buyback AURUM as well as used for project overheads')}      
       </Heading>
       <FarmTabButtons stakedOnly={stakedOnly} setStakedOnly={setStakedOnly}/>
       <div>
