@@ -33,3 +33,4 @@ yarn-error.log*
 sftp-config.json
 /.github/
 yarn.lock
+yb.bat
