@@ -55,9 +55,6 @@ const App: React.FC = () => {
             <Route path="/spells">
               <Farms tokenMode/>
             </Route>
-            <Route path="/referrals">
-                  <Referral />
-              </Route>
             {/* <Route path="/pools"> */}
             {/*  <Pools /> */}
             {/* </Route> */}
